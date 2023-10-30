@@ -1,0 +1,65 @@
+@import "style.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes fluidAnimation {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.02);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+body {
+    background-color: rgb(20, 20, 20);
+    font-family: $fontFamily;
+    color: #444;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+    // overflow: hidden;
+
+    h1 {
+        animation: fluidAnimation 2s infinite;
+    }
+
+    #text {
+        position: relative;
+        z-index: 1;
+        a {
+            text-decoration: none;
+
+            &:hover {
+                color: beige;
+                opacity: 30%;
+            }
+        }
+    }
+
+    #imageBG {
+        background-image: url("https://images.unsplash.com/photo-1696535082915-dec5ca84af8a?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+        background-position: center 40%;
+        background-size: 110vmax;
+        height: 100%;
+        left: 0px;
+        opacity: 0.15;
+        position: absolute;
+        top: 0px;
+        transition: opacity 800ms ease, background-size 800ms ease,
+            background-position 800ms ease;
+        width: 100%;
+        z-index: 0;
+    }
+}
