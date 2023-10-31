@@ -10,7 +10,7 @@ body {
   overflow: hidden;
 }
 body header {
-  z-index: 1;
+  z-index: 999;
   position: absolute;
   display: flex;
   justify-content: space-between;
@@ -120,6 +120,21 @@ body main .interaction .bookButton {
 body main .interaction .bookButton:hover {
   color: white;
   background-color: burlywood;
+}
+body main #hotelContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  z-index: 2;
+}
+body main #hotelContainer .hotel-card {
+  margin-top: 10px;
+  background-color: salmon;
+  min-width: 10vw;
+  min-height: 20vh;
+  height: -moz-max-content;
+  height: max-content;
+  text-align: left;
 }
 body #imageBG {
   background: url("https://images.unsplash.com/photo-1693743057688-9bb45200514d?auto=format&fit=crop&q=80&w=2060&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");

@@ -2,11 +2,9 @@
 include 'dbh.inc.php';
 
 if (isset($_POST['idCity'])) {
-    // Assuming you're sending the selected city id via POST
     $idCity = $_POST['idCity'];
 
-    // Prepare and execute your SQL query to fetch hotels based on $idCity
-    $query = "SELECT * FROM hotel WHERE city_id = $idCity";
+    $query = "SELECT * FROM hotel WHERE id_city = $idCity";
 
     // Fetch the result into an associative array
     $result = $conn->query($query);

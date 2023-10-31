@@ -22,11 +22,11 @@ session_start();
                     //if logged in, set login button to log out
                     if (isset($_SESSION["username"])) {
                         ?>
-                        <li><a href="../include/handle.logout.php" class="userButton">Log Out</a></li>
+                        <li><a href="../include/handle.logout.php" class="userButton">LogOut</a></li>
                         <?php
                     } else {
                         ?>
-                        <li><a href="./pages/login.php" class="userButton">Log In</a></li>
+                        <li><a href="./pages/login.php" class="userButton">LogIn</a></li>
                         <?php
                     }
                 ?>
@@ -45,6 +45,7 @@ session_start();
                 <select name="Country" id="selectCountry">
                     <option value="hereCountry" disabled selected>Destination Country</option>
                 </select>
+
                 <select name="City" id="selectCity">
                     <option value="hereCity" disabled selected>Destination City</option>
                 </select>
@@ -53,6 +54,7 @@ session_start();
                 <select name="Hotel" id="selectHotel">
                     <option value="hereHotel" disabled selected>Hotel</option>
                 </select>
+
                 <select name="Room" id="selectRoom">
                     <option value="hereRoom" disabled selected>Room Type</option>
                     <option value="basic">Basic Single Bed</option>
@@ -67,10 +69,15 @@ session_start();
                     const today = new Date().toISOString().split("T")[0];
                     NOT USED
                 </script>-->
-                <script src="../js/handle.date.js" defer></script>
+                <script src="../js/handle.date.js"></script>
 
                 <button class="bookButton">Book Now</button>
             </form>
+        </div>
+
+        <div id="hotelContainer" class="hotel-container">
+            <script src="../js/handle.preview.js"></script>
+
         </div>
     </main>
 
