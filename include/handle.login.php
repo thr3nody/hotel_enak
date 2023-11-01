@@ -35,10 +35,10 @@ if (isset($_POST['login'])) {
 
             header("Location: ../dist/index.php");
             } else {
-                array_push($error,"Password salah suuu:(");
+                array_push($error,"Incorect Password");
             }
         } else {
-            array_push($error,"Salah username kontool:(");
+            array_push($error,"Incorect Username");
         }
     }
 }

@@ -52,7 +52,7 @@ session_start();
                 <script src="../js/handle.dropdown.js"></script>
 
                 <select name="Hotel" id="selectHotel">
-                    <option value="hereHotel" disabled selected>Hotel</option>
+                    <option value="hereHotel" disabled selected>Destination Hotel</option>
                 </select>
 
                 <select name="Room" id="selectRoom">
