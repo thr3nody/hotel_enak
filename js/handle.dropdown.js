@@ -2,6 +2,7 @@ $(document).ready(function () {
     var countryDropdown = $("#selectCountry");
     var cityDropdown = $("#selectCity");
     var hotelDropdown = $("#selectHotel");
+    var roomDropdown = $("#selectRoom");
     var checkIn = $("#selectCheckIn");
     var checkOut = $("#selectCheckOut");
 
@@ -102,6 +103,34 @@ $(document).ready(function () {
                 },
             });
         }
+    });
+
+    roomDropdown.change(function () {
+        console.log("Room dropdown changed"); // Add this line
+        var selectedRoom = $(this).val();
+
+        // Add if (selectedRoom) when needed
+    });
+
+    $.ajax({
+        url: "../include/handle.roomtype.php",
+        type: "GET",
+        dataType: "json",
+        success: function (data) {
+            roomDropdown.append(
+                '<option value="" selected disabled>Room Type</option>'
+            );
+
+            data.forEach(function (roomTypeData) {
+                var option = $("<option>");
+                option.text(roomTypeData.type_name);
+                option.val(roomTypeData.id_room_type);
+                roomDropdown.append(option);
+            });
+        },
+        error: function (error) {
+            console.log(error);
+        },
     });
 
     checkIn.change(function () {

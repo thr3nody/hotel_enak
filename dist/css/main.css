@@ -10,7 +10,7 @@ body {
   overflow: hidden;
 }
 body header {
-  z-index: 999;
+  z-index: 2;
   position: absolute;
   display: flex;
   justify-content: space-between;
@@ -71,10 +71,11 @@ body main {
   height: 100vh;
 }
 body main .title {
-  z-index: 3;
+  z-index: 2;
   margin: 0.5vh 0;
 }
 body main .interaction {
+  margin: 0 10px;
   z-index: 3;
   display: flex;
   background-color: rgba(45, 45, 45, 0.5);
@@ -86,6 +87,11 @@ body main .interaction {
   outline-width: 2px;
   outline-style: dashed;
   outline-color: burlywood;
+}
+body main .interaction select,
+body main .interaction input,
+body main .interaction .bookButton {
+  margin-bottom: 5px;
 }
 body main .interaction select {
   color: #d0d0d0;
@@ -122,6 +128,7 @@ body main .interaction .bookButton:hover {
   background-color: burlywood;
 }
 body main #hotelContainer {
+  overflow-x: hidden;
   display: flex;
   flex-direction: row;
   gap: 10px;
@@ -149,20 +156,25 @@ body #imageBG {
   width: 100%;
   z-index: 0;
 }
+@media (max-width: 768px) {
+  body main .interaction {
+    flex-direction: column;
+  }
+  body main #hotelContainer {
+    flex-direction: column;
+  }
+}
 @keyframes sk-rotate {
   100% {
     transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
   }
 }
 @keyframes sk-bounce {
   0%, 100% {
     transform: scale(0);
-    -webkit-transform: scale(0);
   }
   50% {
     transform: scale(1);
-    -webkit-transform: scale(1);
   }
 }
 body #loader {
@@ -172,14 +184,16 @@ body #loader {
   width: 100%;
   height: 100%;
   z-index: 9999;
-  opacity: 0.8;
+  background: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.99;
 }
 body #loader .spinner {
-  margin: 100px auto;
   width: 40px;
   height: 40px;
   position: relative;
-  text-align: center;
   animation: sk-rotate 2s infinite linear;
 }
 body #loader .spinner .dot1,
@@ -189,7 +203,7 @@ body #loader .spinner .dot2 {
   display: inline-block;
   position: absolute;
   top: 0;
-  background-color: #333;
+  background-color: #d0d0d0;
   border-radius: 100%;
   animation: sk-bounce 2s infinite ease-in-out;
 }

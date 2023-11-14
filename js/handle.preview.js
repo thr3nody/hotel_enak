@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const hotelContainer = document.getElementById("hotelContainer");
     const selectCity = document.getElementById("selectCity");
-    const selectHotel = document.getElementById("selectHotel");
 
     function createHotelCard(hotel) {
         const hotelCard = document.createElement("div");
@@ -42,34 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function handleHotelSelection(selectedHotel) {
         console.log("Selected Hotel: ", selectedHotel);
-
-        let hotelDropdown = document.getElementById("selectHotel");
-
-        console.log("Before setting value: ", hotelDropdown.value);
-
-        hotelDropdown.innerHTML = "";
-
-        // hotelDropdown.value = selectedHotel.hotel_name;
-        // console.log("After setting value: ", hotelDropdown.value);
-
-        // const event = new Event("change");
-        // hotelDropdown.dispatchEvent(event);
-
-        if (selectedHotel) {
-            const option = document.createElement("option");
-            option.value = selectedHotel.hotel_name;
-            option.text = selectedHotel.hotel_name;
-
-            hotelDropdown.appendChild(option);
-        } else {
-            const defaultOption = document.createElement("option");
-            defaultOption.value = "hereHotel";
-            defaultOption.text = "Destination Hotel";
-
-            hotelDropdown.appendChild;
-        }
-
-        console.log("After setting value: ", hotelDropdown.value);
+        // You can perform any additional actions here based on the selected hotel.
     }
 
     if (!hotelContainer || !selectCity) {
@@ -108,20 +80,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     const card = createHotelCard(hotel);
                     hotelContainer.appendChild(card);
                 });
-
-                // Timeout delay
-                setTimeout(() => {
-                    console.log(
-                        "Dropdown before setting value: ",
-                        selectHotel.value
-                    );
-                    // selectHotel.value = data[0].hotel_name;
-                    hotelDropdown.value = data[0].hotel_name;
-                    console.log(
-                        "Dropdown after setting value: ",
-                        selectHotel.value
-                    );
-                }, 100);
             })
 
             .catch((error) =>

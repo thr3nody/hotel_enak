@@ -12,7 +12,7 @@ body {
     overflow: hidden;
 
     header {
-        z-index: 999;
+        z-index: 2;
 
         position: absolute;
         display: flex;
@@ -95,11 +95,13 @@ body {
         height: 100vh;
 
         .title {
-            z-index: 3;
+            z-index: 2;
             margin: 0.5vh 0;
         }
 
         .interaction {
+            margin: 0 10px;
+
             z-index: 3;
             display: flex;
 
@@ -115,6 +117,13 @@ body {
             outline-width: 2px;
             outline-style: dashed;
             outline-color: burlywood;
+
+            select,
+            input,
+            .bookButton {
+                // width: 100%;
+                margin-bottom: 5px;
+            }
 
             select {
                 color: $mostTextColor;
@@ -166,6 +175,7 @@ body {
         }
 
         #hotelContainer {
+            overflow-x: hidden;
             display: flex;
             flex-direction: row;
 
@@ -207,37 +217,30 @@ body {
         z-index: 0;
     }
 
-    @-webkit-keyframes sk-rotate {
-        100% {
-            -webkit-transform: rotate(360deg);
+    @media (max-width: 768px) {
+        main {
+            .interaction {
+                flex-direction: column;
+            }
+
+            #hotelContainer {
+                flex-direction: column;
+            }
         }
     }
+
     @keyframes sk-rotate {
         100% {
             transform: rotate(360deg);
-            -webkit-transform: rotate(360deg);
         }
     }
-
-    @-webkit-keyframes sk-bounce {
-        0%,
-        100% {
-            -webkit-transform: scale(0);
-        }
-        50% {
-            -webkit-transform: scale(1);
-        }
-    }
-
     @keyframes sk-bounce {
         0%,
         100% {
             transform: scale(0);
-            -webkit-transform: scale(0);
         }
         50% {
             transform: scale(1);
-            -webkit-transform: scale(1);
         }
     }
 
@@ -248,16 +251,19 @@ body {
         width: 100%;
         height: 100%;
         z-index: 9999;
+        background: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0.99;
         // background: url("loader.gif") 50% 50% no-repeat rgb(249, 249, 249);
-        opacity: 0.8;
 
         .spinner {
-            margin: 100px auto;
+            // margin: 100px auto;
             width: 40px;
             height: 40px;
             position: relative;
-            text-align: center;
-            -webkit-animation: sk-rotate 2s infinite linear;
+            // text-align: center;
             animation: sk-rotate 2s infinite linear;
 
             .dot1,
@@ -267,16 +273,14 @@ body {
                 display: inline-block;
                 position: absolute;
                 top: 0;
-                background-color: #333;
+                background-color: $mostTextColor;
                 border-radius: 100%;
-                -webkit-animation: sk-bounce 2s infinite ease-in-out;
                 animation: sk-bounce 2s infinite ease-in-out;
             }
 
             .dot2 {
                 top: auto;
                 bottom: 0;
-                -webkit-animation-delay: -1s;
                 animation-delay: -1s;
             }
         }

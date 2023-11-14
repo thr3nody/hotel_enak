@@ -14,6 +14,7 @@ if (!isset($_SESSION["admin-username"])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <title>Admin Page for Hotel Data</title>
 </head>
 <body>
@@ -57,8 +58,18 @@ if (!isset($_SESSION["admin-username"])) {
             <td><?php echo $row['rating']; ?></td>
             <td>
                 <!-- TODO: Create admin.delete.hotel.php and admin.update.hotel.php -->
-                <a href="admin.delete.hotel.php?id<<?php echo $row['id_hotel']?>">Delete</a>
-                <a href="admin.update.hotel.php?id=<?php echo $row['id_hotel']?>">Update</a>
+                <form method="post" action="../../include/admin.handle.delete.data.php" onsubmit="return confirmDelete();">
+                    <input type="hidden" name="dataType" value="hotel">
+                    <input type="hidden" name="dataId" value="<?php echo $row['id_hotel']; ?>">
+                    <button type="submit" name="deleteData">Delete</button>
+                </form>
+
+                <script>
+                function confirmDelete() {
+                console.log("Confirmation function called");
+                return confirm('Are you sure you want to delete?');
+                }
+                </script>
             </td>
         </tr>    
         <?php

@@ -8,6 +8,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../dist/css/main.css">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="../js/handle.book.js"></script>
     <title>Aku Suka Hotel</title>
 </head>
 <body>
@@ -36,12 +37,12 @@ session_start();
 
     <main>
         <div class="title">
-            <h2>to Los Alamos Hotel</h2>
-            <h1>Welcome</h1>
+            <h2>Welcome</h2>
+            <h1>to Los Alamos Hotel</h1>
         </div>
 
         <div class="interaction">
-            <form action="">
+            <form method="post">
                 <select name="Country" id="selectCountry">
                     <option value="hereCountry" disabled selected>Destination Country</option>
                 </select>
@@ -49,25 +50,21 @@ session_start();
                 <select name="City" id="selectCity">
                     <option value="hereCity" disabled selected>Destination City</option>
                 </select>
-                <script src="../js/handle.dropdown.js"></script>
 
-                <select name="Hotel" id="selectHotel">
+                <!-- <select name="Hotel" id="selectHotel">
                     <option value="hereHotel" disabled selected>Destination Hotel</option>
-                </select>
+                    UNUSED
+                </select> -->
 
-                <select name="Room" id="selectRoom">
-                    <option value="hereRoom" disabled selected>Room Type</option>
-                    <option value="basic">Basic Single Bed</option>
-                    <option value="standard">Standard Double Bed</option>
-                    <option value="deluxe">Deluxe King Size Bed</option>
-                    <option value="velvet">Velvet Package Room</option>
-                </select>
+                <select name="Room" id="selectRoom"></select>
+
+                <script src="../js/handle.dropdown.js"></script> 
 
                 <input type="date" class="theDate" name="checkInDate" id="selectCheckIn" placeholder="Check In Date">
                 <input type="date" class="theDate" name="checkOutDate" id="selectCheckOut" placeholder="Check Out Date" required>
                 <!--<script>
                     const today = new Date().toISOString().split("T")[0];
-                    NOT USED
+                    UNUSED
                 </script>-->
                 <script src="../js/handle.date.js"></script>
 
@@ -77,7 +74,6 @@ session_start();
 
         <div id="hotelContainer" class="hotel-container">
             <script src="../js/handle.preview.js"></script>
-
         </div>
     </main>
 

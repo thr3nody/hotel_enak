@@ -19,9 +19,8 @@ if (!isset($_SESSION["admin-username"])) {
 <body>
     <div id="title">
         <h1>Hotel Data Here</h1>
-        <!-- Add filter mechanism -->
     </div>
-
+    
     <a href="../admin.php">Go Back</a>
 
     <table border="1">
@@ -43,9 +42,19 @@ if (!isset($_SESSION["admin-username"])) {
             <td><?php echo $row['id_country']; ?></td>
             <td><?php echo $row['country_name']; ?></td>
             <td>
-                <!-- TODO: Create admin.delete.hotel.php and admin.update.hotel.php -->
-                <a href="admin.delete.hotel.php?id<<?php echo $row['id_country']?>">Delete</a>
-                <a href="admin.update.hotel.php?id=<?php echo $row['id_country']?>">Update</a>
+                <form method="post" action="../../include/admin.handle.delete.data.php" onsubmit="return confirmDelete();">
+                    <input type="hidden" name="dataType" value="country">
+                    <input type="hidden" name="dataId" value="<?php echo $row['id_country']; ?>">
+                    <button type="submit" name="deleteData">Delete</button>
+                </form>
+
+                <script>
+                    function confirmDelete() {
+                    console.log("Confirmation function called");
+                    return confirm('Are you sure you want to delete?');
+                    }
+                </script>
+
             </td>
         </tr>    
         <?php

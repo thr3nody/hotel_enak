@@ -25,9 +25,10 @@ if (!isset($_SESSION["admin-username"])) {
 
     <div id="action-btn">
         <ul>
-            <td><button onclick="window.location.href='//localhost/hotelEnak/dist/pages/admin.country.data.php'">Country Data</button></td>
-            <td><button onclick="window.location.href='//localhost/hotelEnak/dist/pages/admin.city.data.php'">City Data</button></td>
-            <td><button onclick="window.location.href='//localhost/hotelEnak/dist/pages/admin.hotel.data.php'">Hotel Data</button></td>
+            <td><button onclick="window.location.href='//localhost/hotelEnak/dist/pages/admin.country.data.php'" class="dashboard-btn">Country Data</button></td>
+            <td><button onclick="window.location.href='//localhost/hotelEnak/dist/pages/admin.city.data.php'" class="dashboard-btn">City Data</button></td>
+            <td><button onclick="window.location.href='//localhost/hotelEnak/dist/pages/admin.hotel.data.php'" class="dashboard-btn">Hotel Data</button></td>
+            <td><button onclick="window.location.href='//localhost/hotelEnak/dist/pages/admin.insert.data.php'" class="dashboard-btn">Insert Data</button></td>
         </ul>
     </div>
 </body>
