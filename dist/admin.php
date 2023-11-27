@@ -13,10 +13,11 @@ if (!isset($_SESSION["admin-username"])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/admin.css">
     <title>Hotel Admin Page</title>
 </head>
 <body>
-    <h1>ADMIN</h1>
+    <h1>ADMIN PAGE</h1>
     <header>
         <div id="logout">
             <a href="http://localhost/hotelEnak/include/handle.admin.logout.php" class="logout-btn">Log Out</a>

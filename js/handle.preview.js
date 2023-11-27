@@ -18,14 +18,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 <p>${hotel.description || "No description available"}</p>
                 <p>${hotel.address || "No address available"}</p>   
                 <p>Rating: ${hotel.rating}</p>
-                <p>${
-                    hotel.price
-                        ? `$${hotel.price} per night`
-                        : "Price not available"
-                }</p>
-                <button data-hotel-id="${
+                <button type="button" data-hotel-id="${
                     hotel.id
-                }" class="select-hotel-btn">Select Hotel</button>
+                }" class="select-hotel-btn" id="selectHotel">Select Hotel</button>
             </div>
         `;
 

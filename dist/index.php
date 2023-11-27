@@ -51,30 +51,32 @@ session_start();
                     <option value="hereCity" disabled selected>Destination City</option>
                 </select>
 
-                <!-- <select name="Hotel" id="selectHotel">
-                    <option value="hereHotel" disabled selected>Destination Hotel</option>
-                    UNUSED
-                </select> -->
-
                 <select name="Room" id="selectRoom"></select>
 
                 <script src="../js/handle.dropdown.js"></script> 
 
                 <input type="date" class="theDate" name="checkInDate" id="selectCheckIn" placeholder="Check In Date">
                 <input type="date" class="theDate" name="checkOutDate" id="selectCheckOut" placeholder="Check Out Date" required>
-                <!--<script>
-                    const today = new Date().toISOString().split("T")[0];
-                    UNUSED
-                </script>-->
                 <script src="../js/handle.date.js"></script>
 
-                <button class="bookButton">Book Now</button>
+                <div id="hotelContainer" class="hotel-container">
+                    <script src="../js/handle.preview.js"></script>
+                </div>
+
+                <?php
+                // If not logged in, disable the "Book Now" button
+                if (!isset($_SESSION["username"])) {
+                    echo '<button class="notBookButton" onclick="window.location.href=\'./pages/login.php\'">Login to Start Booking</button>';
+                } else {
+                    echo '<button class="bookButton" id="bookButton">Book Now</button>';
+                }
+                ?>
+
             </form>
         </div>
 
-        <div id="hotelContainer" class="hotel-container">
-            <script src="../js/handle.preview.js"></script>
-        </div>
+
+        <span id="totalPriceDisplay">Total Price: $0.00</span>
     </main>
 
     <div class="onHotelClick"></div>

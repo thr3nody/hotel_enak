@@ -7,5 +7,6 @@
 </head>
 <body>
     <h1>Booking Success</h1>
+    <a href="">View Your Booking Information</a>
 </body>
 </html>

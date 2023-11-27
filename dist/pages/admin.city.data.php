@@ -14,11 +14,12 @@ if (!isset($_SESSION["admin-username"])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/data-view.css">
     <title>Admin Page for City Data</title>
 </head>
 <body>
     <div id="title">
-        <h1>Hotel Data Here</h1>
+        <h1>City Data Here</h1>
         <!-- Add filter mechanism -->
     </div>
 
@@ -61,6 +62,8 @@ if (!isset($_SESSION["admin-username"])) {
                 return confirm('Are you sure you want to delete?');
                 }
                 </script>
+
+                <a href="admin.update.city.php?id=<?php echo $row['id_city']; ?>">Edit</a>
             </td>
         </tr>    
         <?php

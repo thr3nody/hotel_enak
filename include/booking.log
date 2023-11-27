@@ -1,0 +1,9 @@
+Array
+(
+    [country] => 1
+    [city] => 9
+    [roomType] => 3
+    [checkInDate] => 2023-11-20
+    [checkOutDate] => 2023-11-30
+)
+Total Price: 3000000

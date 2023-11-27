@@ -141,4 +141,8 @@ $(document).ready(function () {
             checkOut.show();
         }, 200);
     });
+
+    checkOut.change(function () {
+        console.log("Check out date selected.");
+    });
 });

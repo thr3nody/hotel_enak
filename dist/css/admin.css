@@ -1,0 +1,44 @@
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #ecf0f1;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  color: #3498db;
+}
+
+header {
+  background-color: #3498db;
+  padding: 10px;
+  text-align: right;
+}
+header .logout-btn {
+  background-color: #2ecc71;
+  color: #fff;
+  padding: 5px 10px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+header .logout-btn:hover {
+  background-color: #25a25a;
+}
+
+#action-btn {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+#action-btn .dashboard-btn {
+  background-color: #3498db;
+  color: #fff;
+  padding: 15px 20px;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 16px;
+}
+#action-btn .dashboard-btn:hover {
+  background-color: #217dbb;
+}/*# sourceMappingURL=admin.css.map */

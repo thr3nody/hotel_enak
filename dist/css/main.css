@@ -93,6 +93,9 @@ body main .interaction input,
 body main .interaction .bookButton {
   margin-bottom: 5px;
 }
+body main .interaction .notBookButton {
+  margin-bottom: 5px;
+}
 body main .interaction select {
   color: #d0d0d0;
   background-color: #2d2d2d;
@@ -126,6 +129,19 @@ body main .interaction .bookButton {
 body main .interaction .bookButton:hover {
   color: white;
   background-color: burlywood;
+}
+body main .interaction .notBookButton {
+  color: #d0d0d0;
+  background-color: #2d2d2d;
+  font-size: 20;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  padding: 20.8px 10px;
+  border-radius: 8px;
+  border: 0;
+}
+body main .interaction .notBookButton:hover {
+  color: gray;
+  background-color: aquamarine;
 }
 body main #hotelContainer {
   overflow-x: hidden;

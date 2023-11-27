@@ -14,6 +14,7 @@ if (!isset($_SESSION["admin-username"])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/data-view.css">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <title>Admin Page for Hotel Data</title>
 </head>
@@ -70,6 +71,9 @@ if (!isset($_SESSION["admin-username"])) {
                 return confirm('Are you sure you want to delete?');
                 }
                 </script>
+
+
+                <a href="admin.update.hotel.php?id=<?php echo $row['id_hotel']; ?>">Edit</a>
             </td>
         </tr>    
         <?php

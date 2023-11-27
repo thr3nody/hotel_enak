@@ -124,6 +124,9 @@ body {
                 // width: 100%;
                 margin-bottom: 5px;
             }
+            .notBookButton {
+                margin-bottom: 5px;
+            }
 
             select {
                 color: $mostTextColor;
@@ -170,6 +173,23 @@ body {
                 &:hover {
                     color: white;
                     background-color: burlywood;
+                }
+            }
+            .notBookButton {
+                color: $mostTextColor;
+                background-color: $mainColor;
+
+                font-size: $fontSize;
+                font-family: $fontFamily;
+
+                padding: 20.8px 10px;
+
+                border-radius: 8px;
+                border: 0;
+
+                &:hover {
+                    color: gray;
+                    background-color: aquamarine;
                 }
             }
         }
