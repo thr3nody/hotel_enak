@@ -62,7 +62,6 @@ function getRoomPrice($id_room_type, $check_in_date, $check_out_date)
 
         return $price_per_night * $duration;
     } else {
-        // Handle error if room type not found
         die("Failed to fetch room price: " . mysqli_error($conn));
     }
 }
