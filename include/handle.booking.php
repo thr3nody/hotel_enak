@@ -5,7 +5,6 @@ session_start();
 
 header("Access-Control-Allow-Origin: *");
 
-// Get booking details from POST data
 $id_user = $_SESSION['id_user'];
 $id_room_type = $_POST['selectRoom'];
 $id_hotel = $_POST['selectHotel'];
@@ -32,7 +31,7 @@ $insert = mysqli_query($conn, $query);
 if ($insert) {
     // Booking success
 
-    // Return booking details along with hotel details
+    // Return booking details & hotel details
     $hotelDetails = array('id_hotel' => $id_hotel);
     $result = array_merge($hotelDetails);
 
@@ -42,7 +41,7 @@ if ($insert) {
     die("Booking failed: " . mysqli_error($conn));
 }
 
-// Function to get room price based on room type and duration of stay
+// Room price based on room type, check in date, and check out date
 function getRoomPrice($id_room_type, $check_in_date, $check_out_date)
 {
     global $conn;

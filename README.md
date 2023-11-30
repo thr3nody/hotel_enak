@@ -1,4 +1,4 @@
-# Hotel Bu Dinda 🥳
+# Hotel Bu Dinda WIP🥳
 
 Website booking hotel yang memungkinkan user untuk booking hotel(?). Basically ini tugas kombinasi antara bu Dinda dengan pak Haris yang, well, entahlah.
 
