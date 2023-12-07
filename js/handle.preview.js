@@ -36,7 +36,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function handleHotelSelection(selectedHotel) {
         console.log("Selected Hotel: ", selectedHotel);
-        // You can perform any additional actions here based on the selected hotel.
     }
 
     if (!hotelContainer || !selectCity) {
