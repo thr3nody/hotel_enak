@@ -205,7 +205,9 @@ body {
 
             .hotel-card {
                 margin-top: 10px;
-                background-color: salmon;
+                background-color: $mostTextColor;
+
+                border-radius: 25px;
 
                 min-width: 10vw;
                 // max-width: 20vw;

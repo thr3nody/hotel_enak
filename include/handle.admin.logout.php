@@ -2,6 +2,6 @@
 session_start();
 session_unset();
 session_destroy();
-header("Location: http://localhost/hotelEnak/dist/pages/admin.login.php");
+header("Location: http://localhost/hotel_enak/dist/pages/admin.login.php");
 exit();
 ?>

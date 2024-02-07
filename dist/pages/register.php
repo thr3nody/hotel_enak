@@ -14,7 +14,7 @@ include '../../include/dbh.inc.php';
     <main>
         <h1>Register</h1>
 
-        <form action="../../../hotelEnak/include/handle.register.php" class="interaction" method="post">
+        <form action="../../../hotel_enak/include/handle.register.php" class="interaction" method="post">
             <label for="username">Username: </label>
             <input type="text" id="username" name="Username" required>
 

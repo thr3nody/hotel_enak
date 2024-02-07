@@ -5,9 +5,13 @@
 
 body {
   background-color: rgb(20, 20, 20);
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   font-size: 20;
   overflow: hidden;
+}
+button {
+  padding: 15px;
 }
 body header {
   z-index: 2;
@@ -80,7 +84,7 @@ body main .interaction {
   display: flex;
   background-color: rgba(45, 45, 45, 0.5);
   -webkit-backdrop-filter: blur(3px);
-          backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
   padding: 20px;
   gap: 5px;
   border-radius: 8px;
@@ -100,7 +104,8 @@ body main .interaction select {
   color: #d0d0d0;
   background-color: #2d2d2d;
   font-size: 20;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   padding: 20px 10px;
   border-radius: 8px;
   border: 0;
@@ -109,19 +114,21 @@ body main .interaction input {
   color: #d0d0d0;
   background-color: #2d2d2d;
   font-size: 20;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   padding: 19.8px 10px;
   border-radius: 8px;
   border: 0;
 }
-body main .interaction input[type=date]::-webkit-calendar-picker-indicator {
+body main .interaction input[type="date"]::-webkit-calendar-picker-indicator {
   filter: invert(1);
 }
 body main .interaction .bookButton {
   color: #d0d0d0;
   background-color: #2d2d2d;
   font-size: 20;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   padding: 20.8px 10px;
   border-radius: 8px;
   border: 0;
@@ -134,7 +141,8 @@ body main .interaction .notBookButton {
   color: #d0d0d0;
   background-color: #2d2d2d;
   font-size: 20;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   padding: 20.8px 10px;
   border-radius: 8px;
   border: 0;
@@ -152,14 +160,34 @@ body main #hotelContainer {
 }
 body main #hotelContainer .hotel-card {
   margin-top: 10px;
-  background-color: salmon;
+  margin-bottom: 10px;
+  padding: 18px;
+  background-color: #2d2d2d;
+  border-radius: 25px;
+  outline-width: 2px;
+  outline-color: burlywood;
   min-width: 10vw;
   min-height: 20vh;
   height: -moz-max-content;
   height: max-content;
   text-align: left;
 }
+body main #hotelContainer .hotel-card .select-hotel-btn {
+  margin: 5 0;
+  background-color: #fff;
+  color: #999;
+  font-size: 20;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  padding: 5.8px 8px;
+  border-radius: 8px;
+}
+body main #hotelContainer .hotel-card .select-hotel-btn:hover {
+  color: white;
+  background-color: burlywood;
+}
 body #imageBG {
+  background-color: #fff;
   background: url("https://images.unsplash.com/photo-1693743057688-9bb45200514d?auto=format&fit=crop&q=80&w=2060&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-position: center 40%;
   background-size: 110vmax;
@@ -168,7 +196,10 @@ body #imageBG {
   opacity: 0.15;
   position: absolute;
   top: 0px;
-  transition: opacity 800ms ease, background-size 800ms ease, background-position 800ms ease;
+  transition:
+    opacity 800ms ease,
+    background-size 800ms ease,
+    background-position 800ms ease;
   width: 100%;
   z-index: 0;
 }
@@ -186,7 +217,8 @@ body #imageBG {
   }
 }
 @keyframes sk-bounce {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(0);
   }
   50% {
@@ -227,4 +259,4 @@ body #loader .spinner .dot2 {
   top: auto;
   bottom: 0;
   animation-delay: -1s;
-}/*# sourceMappingURL=main.css.map */
+} /*# sourceMappingURL=main.css.map */

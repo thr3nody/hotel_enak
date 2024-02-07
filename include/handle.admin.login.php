@@ -33,7 +33,7 @@ if (isset($_POST['login'])) {
                 // $_SESSION['password'] = $user['password'];
                 $_SESSION['admin-password'] = $admin['id_admin'];
 
-                header("Location: http://localhost/hotelEnak/dist/admin.php");
+                header("Location: http://localhost/hotel_enak/dist/admin.php");
             // echo "Login successful. Redirecting...";
             // echo "<meta http-equiv='refresh' content='2;url=../dist/index.php'>";
             // exit();
